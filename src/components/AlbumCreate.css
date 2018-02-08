@@ -1,0 +1,16 @@
+.card {
+    margin-top: 40px;
+    background-color: aquamarine;
+    height: 320px;
+    border-radius: 4px;
+}
+.filler {
+    background-color: blue;
+    height: 100%;
+}
+.text {
+    background-color: red;
+    text-align: center;
+    padding-bottom: 32px;
+    padding-top: 28px;
+}
