@@ -13,20 +13,20 @@ describe('photo actions', () => {
   });
 
   it('should create edit photo action', () => {
-    let uid = '123';
+    let uuid = '123';
     let newName = 'new name';
-    expect(actions.editPhoto(uid, newName)).toEqual({
+    expect(actions.editPhoto(uuid, newName)).toEqual({
       type: actions.EDIT_PHOTO,
-      uid: uid,
+      uuid: uuid,
       newName: newName
     })
   });
 
   it('should create delete photo action', () => {
-    let uid = '123';
-    expect(actions.deletePhoto(uid)).toEqual({
+    let uuid = '123';
+    expect(actions.deletePhoto(uuid)).toEqual({
       type: actions.DELETE_PHOTO,
-      uid: uid
+      uuid: uuid
     })
   });
 });

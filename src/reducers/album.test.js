@@ -14,7 +14,7 @@ describe('album reducer', () => {
     let name = 'test name';
     let al = album(undefined, actions.addAlbum(name));
     expect(al).toEqual({
-      uid: v4(),
+      uuid: v4(),
       name: name,
       photos: []
     })
@@ -26,7 +26,7 @@ describe('album reducer', () => {
     let newName = 'new test name';
     al = album(al, actions.editAlbum(1, newName));
     expect(al).toEqual({
-      uid: 1,
+      uuid: 1,
       name: newName,
       photos: []
     })

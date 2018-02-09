@@ -2,7 +2,7 @@ import actions from '../actions/';
 import {v4} from 'uuid';
 
 let initialState = {
-  uid: 0,
+  uuid: 0,
   name: '',
   photos: []
 }
@@ -11,7 +11,7 @@ const album = (state = initialState, action) => {
   switch (action.type) {
     case actions.album.ADD_ALBUM:
       return {
-        uid: v4(),
+        uuid: v4(),
         name: action.name,
         photos: []
       }

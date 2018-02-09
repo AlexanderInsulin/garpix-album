@@ -11,20 +11,20 @@ describe('album actions', () => {
   });
 
   it('should create edit album action', () => {
-    let uid = '123';
+    let uuid = '123';
     let newName = 'new name';
-    expect(actions.editAlbum(uid , newName)).toEqual({
+    expect(actions.editAlbum(uuid , newName)).toEqual({
       type: actions.EDIT_ALBUM,
-      uid: uid,
+      uuid: uuid,
       newName: newName,
     });
   });
 
   it('should create delete album action', () => {
-    let uid = '123';
-    expect(actions.deleteAlbum(uid)).toEqual({
+    let uuid = '123';
+    expect(actions.deleteAlbum(uuid)).toEqual({
       type: actions.DELETE_ALBUM,
-      uid: uid,
+      uuid: uuid,
     });
   });
 });

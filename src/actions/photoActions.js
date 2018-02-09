@@ -11,13 +11,13 @@ export const addPhoto = (name, href) => ({
   imageURL: href
 })
 
-export const editPhoto = (uid, newName) => ({
+export const editPhoto = (uuid, newName) => ({
   type: EDIT_PHOTO,
-  uid: uid,
+  uuid: uuid,
   newName: newName
 })
 
-export const deletePhoto = (uid) => ({
+export const deletePhoto = (uuid) => ({
   type: DELETE_PHOTO,
-  uid: uid,
+  uuid: uuid,
 })

@@ -7,13 +7,13 @@ export const addAlbum = (name) => ({
   name: name
 })
 
-export const editAlbum = (uid, newName) => ({
+export const editAlbum = (uuid, newName) => ({
   type: EDIT_ALBUM,
-  uid: uid,
+  uuid: uuid,
   newName: newName
 })
 
-export const deleteAlbum = (uid) => ({
+export const deleteAlbum = (uuid) => ({
   type: DELETE_ALBUM,
-  uid: uid
+  uuid: uuid
 })
