@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './AlbumCreate.css';
+import './Album.css';
 import { Col } from 'reactstrap';
 
-class AlbumCreate extends Component {
+class Album extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Создать альбом',
-      image: 'https://n6-img-fp.akamaized.net/free-icon/add-outlined-plus-sign_318-74759.jpg?size=338&ext=jpg',
+      name: props.name,
+      image: (props.image == null) ? 'https://gostlab.ru/img/article/migayushhij-znak-voprosa-na-monitore-vashego-mac.jpg': props.image,
     };
   }
   render() {
@@ -22,4 +22,4 @@ class AlbumCreate extends Component {
   }
 }
 
-export default AlbumCreate;
+export default Album;
