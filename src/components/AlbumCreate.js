@@ -8,7 +8,7 @@ class AlbumCreate extends Component {
     super(props);
     this.state = {
       name: 'Создать альбом',
-      image: 'https://n6-img-fp.akamaized.net/free-icon/add-outlined-plus-sign_318-74759.jpg?size=338&ext=jpg',
+      image: 'https://pp.userapi.com/c834301/v834301478/ae5a9/VrmQSB3NPeU.jpg',
     };
   }
   render() {
