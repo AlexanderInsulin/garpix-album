@@ -1,0 +1,6 @@
+export const UPLOAD_PHOTO_REQUESTED = 'UPLOAD_PHOTO_REQUESTED';
+export const UPLOAD_PHOTO_OK = 'UPLOAD_PHOTO_OK';
+export const UPLOAD_PHOTO_FAIL = 'UPLOAD_PHOTO_FAIL';
+export const ADD_PHOTO = 'ADD_PHOTO';
+export const EDIT_PHOTO = 'ADD_PHOTO';
+export const DELETE_PHOTO = 'ADD_PHOTO';
