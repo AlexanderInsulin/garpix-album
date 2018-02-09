@@ -7,6 +7,8 @@
     border-color: rgba(130, 130, 130, 0.25);
     background-repeat: no-repeat;
     background-position: center;
+}
+.backSize {
     background-size: cover;
 }
 .filler {

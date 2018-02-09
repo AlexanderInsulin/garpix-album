@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './AlbumCreate.css';
+import './Album.css';
 import { Col } from 'reactstrap';
 
 class AlbumCreate extends Component {
@@ -13,7 +14,7 @@ class AlbumCreate extends Component {
   render() {
     return (
       <Col xs="12" sm="6" md="4">
-      <div className="card" style={{  backgroundImage: `url(${this.state.image})` }}>
+      <div className="card backSizeCreate" style={{  backgroundImage: `url(${this.state.image})` }}>
         <div className="filler"> </div>
         <div className="text"> {this.state.name} </div>
       </div>
