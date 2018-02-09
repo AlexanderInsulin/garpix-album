@@ -16,7 +16,7 @@ describe('album reducer', () => {
     expect(al).toEqual({
       uid: v4(),
       name: name,
-      protos: []
+      photos: []
     })
   });
 
@@ -28,7 +28,7 @@ describe('album reducer', () => {
     expect(al).toEqual({
       uid: 1,
       name: newName,
-      protos: []
+      photos: []
     })
   });
 })
