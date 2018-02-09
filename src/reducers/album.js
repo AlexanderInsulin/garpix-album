@@ -16,7 +16,7 @@ const album = (state = initialState, action) => {
         photos: []
       }
       case actions.album.EDIT_ALBUM:
-        return Object.assign(state, {name: action.newName})
+        return {...state, name: action.newName}
     default:
       return state;
   }
