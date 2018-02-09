@@ -13,6 +13,7 @@ describe('photo actions', () => {
   });
 
   it('should create edit photo action', () => {
+    let uid = '123';
     let newName = 'new name';
     expect(actions.editPhoto(uid, newName)).toEqual({
       type: actions.EDIT_PHOTO,
