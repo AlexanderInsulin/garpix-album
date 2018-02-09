@@ -11,6 +11,7 @@ describe('album actions', () => {
   });
 
   it('should create edit album action', () => {
+    let uid = '123';
     let newName = 'new name';
     expect(actions.editAlbum(uid , newName)).toEqual({
       type: actions.EDIT_ALBUM,
@@ -20,7 +21,8 @@ describe('album actions', () => {
   });
 
   it('should create delete album action', () => {
-    expect(actions.editAlbum(uid)).toEqual({
+    let uid = '123';
+    expect(actions.deleteAlbum(uid)).toEqual({
       type: actions.DELETE_ALBUM,
       uid: uid,
     });
