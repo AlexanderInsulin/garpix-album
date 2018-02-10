@@ -27,4 +27,18 @@ describe('album actions', () => {
       uuid: uuid,
     });
   });
+
+  it('should create add photo to album action', () => {
+    let uuid = '123';
+    let photo = {
+      uuid: 0,
+      name: '',
+      imageURL: '',
+    }
+    expect(actions.addPhoto(uuid, photo)).toEqual({
+      type: actions.ADD_PHOTO,
+      uuid: uuid,
+      photo: photo,
+    });
+  });
 });
