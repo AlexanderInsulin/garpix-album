@@ -1,5 +1,6 @@
 import actions from '../actions/';
 import {v4} from 'uuid';
+import photo from './photo';
 
 let initialState = {
   uuid: 0,
@@ -16,7 +17,15 @@ const album = (state = initialState, action) => {
         photos: []
       }
       case actions.album.EDIT_ALBUM:
+        if (state.uuid !== action.uuid) {
+          return state;
+        }
         return {...state, name: action.newName}
+      case actions.album.ADD_PHOTO:
+        if (state.uuid !== action.uuid) {
+          return state;
+        }
+        return {...state, photos: [...state.photos, photo(undefined, actions.photo.addPhoto(action.photoName, action.photoImageURL))]}
     default:
       return state;
   }
