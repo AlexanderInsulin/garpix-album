@@ -12,8 +12,8 @@ const photo = (state = initialState, action) => {
     case actions.photo.ADD_PHOTO:
       return {
         uuid: v4(),
-        name: action.name,
-        imageURL: action.imageURL
+        name: action.photoName,
+        imageURL: action.photoImageURL
       }
     default:
       return state;

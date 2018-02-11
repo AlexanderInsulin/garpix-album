@@ -7,17 +7,17 @@ export const DELETE_PHOTO = 'DELETE_PHOTO';
 
 export const addPhoto = (name, href) => ({
   type: ADD_PHOTO,
-  name: name,
-  imageURL: href
+  photoName: name,
+  photoImageURL: href
 })
 
 export const editPhoto = (uuid, newName) => ({
   type: EDIT_PHOTO,
-  uuid: uuid,
-  newName: newName
+  photoUuid: uuid,
+  photoNewName: newName
 })
 
 export const deletePhoto = (uuid) => ({
   type: DELETE_PHOTO,
-  uuid: uuid,
+  photoUuid: uuid,
 })

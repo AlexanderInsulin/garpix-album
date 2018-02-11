@@ -7,8 +7,8 @@ describe('photo actions', () => {
     let href = 'http://www.text2image.com/user_images/text2image_F64329_20180209_034923.png';
     expect(actions.addPhoto(name, href)).toEqual({
       type: actions.ADD_PHOTO,
-      name: name,
-      imageURL: href,
+      photoName: name,
+      photoImageURL: href,
     })
   });
 
@@ -17,8 +17,8 @@ describe('photo actions', () => {
     let newName = 'new name';
     expect(actions.editPhoto(uuid, newName)).toEqual({
       type: actions.EDIT_PHOTO,
-      uuid: uuid,
-      newName: newName
+      photoUuid: uuid,
+      photoNewName: newName
     })
   });
 
@@ -26,7 +26,7 @@ describe('photo actions', () => {
     let uuid = '123';
     expect(actions.deletePhoto(uuid)).toEqual({
       type: actions.DELETE_PHOTO,
-      uuid: uuid
+      photoUuid: uuid
     })
   });
 });
