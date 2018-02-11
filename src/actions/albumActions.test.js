@@ -20,14 +20,6 @@ describe('album actions', () => {
     });
   });
 
-  it('should create delete album action', () => {
-    let uuid = '123';
-    expect(actions.deleteAlbum(uuid)).toEqual({
-      type: actions.DELETE_ALBUM,
-      albumUuid: uuid,
-    });
-  });
-
   it('should create add photo to album action', () => {
     let uuid = '123';
     let photoName = '';
