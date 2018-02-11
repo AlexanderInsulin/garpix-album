@@ -31,4 +31,16 @@ describe('album actions', () => {
       photoImageURL: photoImageURL,
     });
   });
+
+  it('should create delete photo from album action', () => {
+    let albumUuid = '1';
+    let photoUuid = '2';
+    expect(actions.deletePhoto(albumUuid, photoUuid)).toEqual({
+      type: actions.DELETE_PHOTO,
+      albumUuid: albumUuid,
+      photoUuid: photoUuid,
+    });
+  });
+
+
 });

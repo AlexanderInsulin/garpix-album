@@ -26,6 +26,8 @@ const album = (state = initialState, action) => {
           return state;
         }
         return {...state, photos: [...state.photos, photo(undefined, actions.photo.addPhoto(action.photoName, action.photoImageURL))]}
+      case actions.album.DELETE_PHOTO:
+        return {...state, photos: state.photos.filter(p => p.uuid != action.photoUuid)};
     default:
       return state;
   }

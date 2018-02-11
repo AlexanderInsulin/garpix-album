@@ -52,4 +52,13 @@ describe('album reducer', () => {
     }]
     expect(after.photos).toEqual(photos);
   });
+
+  it('should delete photo from album', () => {
+    let uuid = v4();
+    let al = album('album name', actions.addAlbum(name));
+    al = album(al, actions.addPhoto(uuid, 'name', 'url'));
+    let photos = [];
+    al = album(al, actions.deletePhoto(uuid, uuid))
+    expect(al.photos).toEqual(photos);
+  });
 })
