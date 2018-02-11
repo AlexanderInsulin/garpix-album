@@ -19,8 +19,9 @@ export const deleteAlbum = (uuid) => ({
   uuid: uuid
 })
 
-export const addPhoto = (uuid, photo) => ({
+export const addPhoto = (uuid, photoName, photoImageURL) => ({
   type: ADD_PHOTO,
   uuid: uuid,
-  photo: photo
+  photoName: photoName,
+  photoImageURL: photoImageURL
 })

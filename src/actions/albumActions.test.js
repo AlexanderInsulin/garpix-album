@@ -30,15 +30,13 @@ describe('album actions', () => {
 
   it('should create add photo to album action', () => {
     let uuid = '123';
-    let photo = {
-      uuid: 0,
-      name: '',
-      imageURL: '',
-    }
-    expect(actions.addPhoto(uuid, photo)).toEqual({
+    let photoName = '';
+    let photoImageURL = '';
+    expect(actions.addPhoto(uuid, photoName, photoImageURL)).toEqual({
       type: actions.ADD_PHOTO,
       uuid: uuid,
-      photo: photo,
+      photoName: photoName,
+      photoImageURL: photoImageURL,
     });
   });
 });
