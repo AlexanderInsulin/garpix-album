@@ -3,7 +3,7 @@ import {v4} from 'uuid';
 import photo from './photo';
 
 let initialState = {
-  uuid: 0,
+  uuid: v4(),
   name: '',
   photos: []
 }

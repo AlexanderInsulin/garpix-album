@@ -2,7 +2,7 @@ import actions from '../actions/';
 import {v4} from 'uuid';
 
 const initialState = {
-  uuid: 0,
+  uuid: v4(),
   name: '',
   imageURL: '',
 }
