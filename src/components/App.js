@@ -1,21 +1,44 @@
 import React, { Component } from 'react';
 import './App.css';
+import { connect } from 'react-redux'
 import { Container, Row, Col } from 'reactstrap';
+import actions from '../actions';
+import { bindActionCreators } from 'redux'
+
 
 class App extends Component {
   render() {
     return (
       <Container>
-        <Row>
-          <Col>
-            2
-          </Col>
+        <button onClick={() => this.props.addAlbum('123')}>add album</button>
+
+        <Row >
+          {this.props.galery.map((album) =>
+            <Col xs={6} key={album.uuid}>
+              <button onClick={() => this.props.addPhoto(album.uuid, 's', 's')}>add photo</button>
+              {album.name}
+              {album.photos.map((photo) =>
+                <p key={photo.uuid}>{photo.name}</p>
+              )}
+            </Col>
+          )}
         </Row>
       </Container>
     );
   }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    galery: state.galery
+  }
+}
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addPhoto: bindActionCreators(actions.album.addPhoto, dispatch),
+    addAlbum: bindActionCreators(actions.album.addAlbum, dispatch),
+  }
+}
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
