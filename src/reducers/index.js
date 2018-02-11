@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import album from './album';
+import galery from './galery';
 
 const galeryApp = combineReducers({
-  album
+  galery
 })
 
 export default galeryApp;
