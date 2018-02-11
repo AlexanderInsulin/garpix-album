@@ -21,12 +21,4 @@ describe('photo actions', () => {
       photoNewName: newName
     })
   });
-
-  it('should create delete photo action', () => {
-    let uuid = '123';
-    expect(actions.deletePhoto(uuid)).toEqual({
-      type: actions.DELETE_PHOTO,
-      photoUuid: uuid
-    })
-  });
 });
