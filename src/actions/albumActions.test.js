@@ -6,7 +6,7 @@ describe('album actions', () => {
     let name = 'test name';
     expect(actions.addAlbum(name)).toEqual({
       type: actions.ADD_ALBUM,
-      name: name,
+      albumName: name,
     });
   });
 
@@ -15,8 +15,8 @@ describe('album actions', () => {
     let newName = 'new name';
     expect(actions.editAlbum(uuid , newName)).toEqual({
       type: actions.EDIT_ALBUM,
-      uuid: uuid,
-      newName: newName,
+      albumUuid: uuid,
+      albumNewName: newName,
     });
   });
 
@@ -24,7 +24,7 @@ describe('album actions', () => {
     let uuid = '123';
     expect(actions.deleteAlbum(uuid)).toEqual({
       type: actions.DELETE_ALBUM,
-      uuid: uuid,
+      albumUuid: uuid,
     });
   });
 
@@ -34,7 +34,7 @@ describe('album actions', () => {
     let photoImageURL = '';
     expect(actions.addPhoto(uuid, photoName, photoImageURL)).toEqual({
       type: actions.ADD_PHOTO,
-      uuid: uuid,
+      albumUuid: uuid,
       photoName: photoName,
       photoImageURL: photoImageURL,
     });

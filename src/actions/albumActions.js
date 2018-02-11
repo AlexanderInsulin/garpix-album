@@ -5,23 +5,23 @@ export const ADD_PHOTO = 'ADD_PHOTO';
 
 export const addAlbum = (name) => ({
   type: ADD_ALBUM,
-  name: name
+  albumName: name
 })
 
 export const editAlbum = (uuid, newName) => ({
   type: EDIT_ALBUM,
-  uuid: uuid,
-  newName: newName
+  albumUuid: uuid,
+  albumNewName: newName
 })
 
 export const deleteAlbum = (uuid) => ({
   type: DELETE_ALBUM,
-  uuid: uuid
+  albumUuid: uuid
 })
 
 export const addPhoto = (uuid, photoName, photoImageURL) => ({
   type: ADD_PHOTO,
-  uuid: uuid,
+  albumUuid: uuid,
   photoName: photoName,
   photoImageURL: photoImageURL
 })

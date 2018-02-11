@@ -13,16 +13,16 @@ const album = (state = initialState, action) => {
     case actions.album.ADD_ALBUM:
       return {
         uuid: v4(),
-        name: action.name,
+        name: action.albumName,
         photos: []
       }
       case actions.album.EDIT_ALBUM:
-        if (state.uuid !== action.uuid) {
+        if (state.uuid !== action.albumUuid) {
           return state;
         }
-        return {...state, name: action.newName}
+        return {...state, name: action.albumNewName}
       case actions.album.ADD_PHOTO:
-        if (state.uuid !== action.uuid) {
+        if (state.uuid !== action.albumUuid) {
           return state;
         }
         return {...state, photos: [...state.photos, photo(undefined, actions.photo.addPhoto(action.photoName, action.photoImageURL))]}
