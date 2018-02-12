@@ -19,7 +19,10 @@ class App extends Component {
               <input type="file" onChange={(e) => this.setState({a: e.target.files[0]})}></input>
               {album.name}
               {album.photos.map((photo) =>
-                <p key={photo.uuid}>{photo.name} <button onClick={() => this.props.deletePhoto(album.uuid, photo.uuid)}>x</button></p>
+                <div key={photo.uuid}>
+                  <img src={toString(photo.imageURL)}/>
+                  <p>{photo.name} <button onClick={() => this.props.deletePhoto(album.uuid, photo.uuid)}>x</button></p>
+                </div>
               )}
             </Col>
           )}
