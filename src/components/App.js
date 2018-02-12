@@ -18,7 +18,7 @@ class App extends Component {
               <button onClick={() => this.props.addPhoto(album.uuid, 's', 's')}>add photo</button>
               {album.name}
               {album.photos.map((photo) =>
-                <p key={photo.uuid}>{photo.name}</p>
+                <p key={photo.uuid}>{photo.name} <button onClick={() => this.props.deletePhoto(album.uuid, photo.uuid)}>x</button></p>
               )}
             </Col>
           )}
@@ -38,6 +38,7 @@ const mapDispatchToProps = (dispatch) => {
   return {
     addPhoto: bindActionCreators(actions.album.addPhoto, dispatch),
     addAlbum: bindActionCreators(actions.album.addAlbum, dispatch),
+    deletePhoto: bindActionCreators(actions.album.deletePhoto, dispatch),
   }
 }
 
