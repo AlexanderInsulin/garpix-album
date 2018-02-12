@@ -12,7 +12,7 @@ class Image extends Component {
   }
   render() {
     return (
-      <Col xs="6" lg="3">
+      <Col xs="12" sm="6" lg="4" xl="3">
         <div className="imageCard">
           <div className="imageImage" style={{ backgroundImage: `url(${this.state.image})` }}> </div>
           <div className="imageText"> {this.state.name} </div>

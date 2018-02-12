@@ -10,7 +10,7 @@ class Images extends Component {
 					<Image name="dcm;cecece" image="https://pp.userapi.com/c841220/v841220011/4dd9e/4w1vx4vcUik.jpg"/>
 					<Image name="dcece" image="https://pp.userapi.com/c635101/v635101156/68d00/tJF5bpz8xaA.jpg" />
 					<Image name="cdelle kehxujedj sbebofkdi skhfjlu eh;ksn vjc.hvi slrk/nvjckghshpi/lkvnhd kgsuieh;fiovlnc dskjuvbs.ike hdsk.dhklmvnsjlv" />
-					<Image name="dc d" />
+					<Image name="dc d" image="https://pp.userapi.com/c841138/v841138255/6fc01/hypMSMtu4XU.jpg" />
 					<Image name="ddd d  d d d d" />
 					<Image name="deee" />
 					<Image name="eeerdsv" />
