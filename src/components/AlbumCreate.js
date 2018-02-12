@@ -13,7 +13,7 @@ class AlbumCreate extends Component {
   }
   render() {
     return (
-      <Col xs="12" sm="6" md="4">
+      <Col xs="12" md="6" xl="4">
       <div className="card backSizeCreate" style={{  backgroundImage: `url(${this.state.image})` }}>
         <div className="filler"> </div>
         <div className="text"> {this.state.name} </div>

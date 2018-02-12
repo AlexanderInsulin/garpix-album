@@ -18,7 +18,7 @@ class App extends Component {
           <div className="navCenter"> ame </div>
           <div> <NavbarBrand href="/" className="navEditter"> <i class="material-icons">create</i> </NavbarBrand> </div>
         </Navbar>
-        <Images />
+        <Galery />
       </div>
     );
   }
