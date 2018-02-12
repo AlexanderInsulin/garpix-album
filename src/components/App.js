@@ -15,7 +15,8 @@ class App extends Component {
         <Row >
           {this.props.galery.map((album) =>
             <Col xs={6} key={album.uuid}>
-              <button onClick={() => this.props.addPhoto(album.uuid, 's', 's')}>add photo</button>
+              <button onClick={() => this.props.uploadPhoto(album.uuid, 'a', this.state.a)}>add photo</button>
+              <input type="file" onChange={(e) => this.setState({a: e.target.files[0]})}></input>
               {album.name}
               {album.photos.map((photo) =>
                 <p key={photo.uuid}>{photo.name} <button onClick={() => this.props.deletePhoto(album.uuid, photo.uuid)}>x</button></p>
@@ -39,6 +40,7 @@ const mapDispatchToProps = (dispatch) => {
     addPhoto: bindActionCreators(actions.album.addPhoto, dispatch),
     addAlbum: bindActionCreators(actions.album.addAlbum, dispatch),
     deletePhoto: bindActionCreators(actions.album.deletePhoto, dispatch),
+    uploadPhoto: bindActionCreators(actions.album.uploadPhoto, dispatch),
   }
 }
 
