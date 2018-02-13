@@ -7,7 +7,7 @@ class AlbumCreate extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: 'Создать альбом',
+      name: '',
       image: 'https://pp.userapi.com/c834301/v834301478/ae5a9/VrmQSB3NPeU.jpg',
     };
   }
